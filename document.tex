@@ -1,0 +1,130 @@
+\documentclass[10pt,twocolumn]{article}
+
+% use the oxycomps style file
+\usepackage{oxycomps}
+
+% usage: \fixme[comments describing issue]{text to be fixed}
+% define \fixme as not doing anything special
+\newcommand{\fixme}[2][]{#2}
+% overwrite it so it shows up as red
+\renewcommand{\fixme}[2][]{\textcolor{red}{#2}}
+% overwrite it again so related text shows as footnotes
+%\renewcommand{\fixme}[2][]{\textcolor{red}{#2\footnote{#1}}}
+
+% read references.bib for the bibtex data
+\bibliography{references}
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (The Occidental Computer Science Comprehensive Project: Goals, Timeline, Format, and Advice)
+    /Author (Justin Li)
+}
+
+% set the title and author information
+\title{HTML Tutorial for Computer Science Students:\\
+Junior Comps Tutorial Assignment 2}
+\author{Charlie Rui Chai}
+\affiliation{Occidental College}
+\email{rchai@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This tutorial will introduce the basics of HTML to help the readers to understand what HTML is, what they can do with it, and start to build their own website with HTML. This tutorial related to my comps project by providing a helpful way of building the website of a web app.
+
+HTML is a markup language. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. We can build a website with some most basic knowledge to HTML.
+
+
+\section{Methods}
+
+I implement this tutorial by following the online web-dev course [Quote] and use what I learned from this course to write a simple .html webpage. Thus, I will first introduce the HTML elements that I use, following by other useful HTML syntax. Then, I will walk through how I build this webpage (source codes included in the same folder), so readers can have a try by themselves.
+
+\subsection{HTML Elements}
+Here are some basic HTML elements:
+
+\begin{lstlisting}[language=bash]
+<!DOCTYPE html>
+<head>
+    <title>Enter your title</title>
+</head>
+<body>
+    <!-- Your content goes here -->
+</body>
+</html>
+\end{lstlisting}
+
+\textbf{1. HTML Boilerplate} The HTML boilerplateis the basic HTML structure on the very beginning of an HTML file. We can change the title name of this file that will show on the browser's tab. We can start adding content to the webpage using HTML elements into the body section.
+
+
+\begin{lstlisting}[language=bash]
+<p>This is a paragraph.</p>
+\end{lstlisting}
+\textbf{2. Paragraph} The paragraph element allows you to create paragraphs of text.
+
+\begin{lstlisting}[language=bash]
+<h1>Headings 1</h1>
+<h2>Headings 2</h2>
+<h3>Headings 3</h3>
+\end{lstlisting}
+\textbf{3. Headings} Headings are used to structure the content on your webpage. There are six heading levels, from h1 to h6.
+
+\begin{lstlisting}[language=bash]
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Orange</li>
+</ul>
+\end{lstlisting}
+\textbf{4. Lists} HTML offers two types of lists: ordered (ol) and unordered (ul). Each list item is represented by the li tag.
+
+\begin{lstlisting}[language=bash]
+<img src="image.jpg" alt="Description of the image">
+\end{lstlisting}
+\textbf{5. Images} To add an image to your webpage, use the img tag with the src attribute specifying the image file's path or URL. You can also include alt text for accessibility.
+
+\begin{lstlisting}[language=bash]
+<a href="https://www.google.com">Visit google.com</a>
+\end{lstlisting}
+\textbf{6. Links} To create a link, use the anchor tag with the href attribute specifying the URL.
+
+\begin{lstlisting}[language=bash]
+<div style="background-color: yellow;">
+  <h2>Section Title</h2>
+  <p>This is a <span style="color: red;">highlighted</span> paragraph inside a division.</p>
+</div>
+\end{lstlisting}
+\textbf{7. Divisions and Spans} The division and span tags are used to group and style portions of content. 
+
+
+
+\subsection{Build a Simple Webpage}
+We create a new file with a ".html" file extension in VSCode and name it as tutorial.html. Then, we write the html boilerplate code, so that the web browser can recognize it as a HTML5 webpage. We name the title of this page as "tutorial". Inside the body part, we start to fill in the contents we want. We firstly write our heading text between the heading element. Then, we add our main text inside the paragraph element. We add an image by using the image element. We need to make sure to include this image into the same folder as the html code. We can also include a link to another website using the anchor tag element. This link will lead users to Oxy's official website for dining facilities. Readers can utilize these elements and add their own content. After adding your content and elements to the HTML document, save the file with the .html extension. Then, you can open the file in a web browser to view your webpage. 
+
+We can visually check if everything works as we expected. We can also use the "Inspect" function provided by the browser. Here we use Google Chrome as an example to illustrate how this works. When we click "Inspect," Chrome will open a separate window default on the right side of our current html page. Under the "Elements" panel, we are able to highlight the elements we are interested in. We can also edit the HTML of the webpage directly. We will double-click on any element or value in the "Elements" panel to edit it. However, these changes are temporary and will be lost when when refresh the page or close the browser.
+
+This tutorial covered the basics of creating a simple webpage using HTML elements. Our readers learned about the structure of an HTML document, headings, paragraphs, lists, links, images, grouping elements, and other useful elements. With these basic skills, our readers can start building more complex webpages by combining these elements and styling them further with CSS(Cascading Style Sheets). Additionally, they can add interactivity and functionality to their webpages using JavaScript.
+
+
+\section{Evaluation: Metrics and Results}
+
+To evaluate the outcome of this tutorial, we can check if these following goals are achieved. This tutorial aims to introducing HTML and allowing beginners to build websites with basic html elements, and helping them to learn further knowledge in the future. For evaluation purposes, we also need to assess how well the readers can follow the tutorial when building their own projects.
+
+This tutorial has done well in introducing html and explaining basic elements. This tutorial has also provided suggestions for readers who wish to learn more advanced skills. This tutorial is clear and straightforward so readers can easily follow and learn to build their own webpages.
+
+\section{Reflection}
+
+The experience from this tutorial helps me with my project in these different ways. First, I have a very rough prototype for my comps project, and gain better understanding to the workload and skills I need to accomplish it. This experience indicate that my comps topic is realizable. I also notice that tech skills for web-dev keep evolving, so I need to make sure that I learn the latest skills to fit the market and users' needs. 
+
+\section{References}
+[1] The Web Developer Bootcamp 2024: https://www.udemy.com/course/the-web-developer-bootcamp/
+
+\end{document}
